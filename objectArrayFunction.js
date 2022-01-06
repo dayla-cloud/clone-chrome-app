@@ -59,3 +59,16 @@ const list = {
 list.quest(list.words[0]);
 list.quest(list.words[1]);
 list.quest(list.words[2]);
+
+// recap 2 - return
+const calculator = {
+  plus: function (a, b) {
+    console.log("hello");
+    // console.log(a + b);
+    return a + b;
+    console.log("bye");
+    // return을 쓴 줄에서 그 함수는 끝난다. bye 가 보이지 않는 이유.
+  },
+};
+
+const plusResult = calculator.plus(2, 3);
