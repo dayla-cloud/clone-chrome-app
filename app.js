@@ -1,13 +1,7 @@
 const h1s = document.querySelectorAll('h1[class^="title"]');
 
 function handleActive() {
-  const colorChanged = "active";
-  if (this.classList.contains(colorChanged)) {
-    this.classList.remove(colorChanged);
-  } else {
-    this.classList.add(colorChanged);
-  }
-  console.log(this.className);
+  this.classList.toggle("active");
 }
 
 for (h1 of h1s) {
