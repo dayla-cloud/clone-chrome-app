@@ -1,6 +1,20 @@
-const title = document.querySelectorAll("h1[class^='title']");
+// const title = document.querySelector("div[class='title']");
 
-console.log(title);
-for (let i = 0; i <= title.length; i++) {
-  title[i].style.color = "blue";
+// function handleTitleClick() {
+//   console.log("title was clicked");
+// }
+
+// title.addEventListener("click", handleTitleClick);
+
+const titles = document.querySelector('h1[class^="title"]:nth-child(2)');
+
+console.log(titles);
+function handle() {
+  console.log("clicked");
 }
+
+// titles[0].addEventListener("click", handle);
+
+// for (title of titles) {
+//   title.addEventListener("click", handle);
+// }
