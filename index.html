@@ -2,18 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Clone Chrome App</title>
+    <title>Wonday[oneday]:Wonderful Day</title>
   </head>
   <body>
-    <div class="title">
-      <h1>hello title h1 in div</h1>
-    </div>
-    <h1 draggable="true" class="title1">hello title1 h1</h1>
-    <h1 class="title2">hello title2 h1</h1>
-    <h1 class="title3">hello title3 h1</h1>
+    <form id="login-form">
+      <input
+        required
+        maxlength="15"
+        type="text"
+        placeholder="What is your name?"
+      />
+      <input type="submit" value="submmit" />
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
     <script src="app.js"></script>
   </body>
 </html>

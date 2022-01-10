@@ -1,12 +1,26 @@
-body {
-  background-color: beige;
+.hidden {
+  display: none;
 }
 
-h1 {
-  color: cornflowerblue;
-  transition: all ease 0.3s;
+input[type="text"] {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 2rem;
+  height: 2rem;
+  border: 0px;
+  text-align: center;
+  margin-right: 1rem;
 }
 
-.active {
-  color: tomato;
+/* input[type="text"]:focus {
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+} */
+
+input[type="submit"] {
+  height: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 2rem;
+  border: 0px;
+  width: 5rem;
+  text-align: center;
+  text-transform: uppercase;
 }
