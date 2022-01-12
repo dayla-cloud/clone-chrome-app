@@ -9,11 +9,13 @@ input[type="text"] {
   border: 0px;
   text-align: center;
   margin-right: 1rem;
+  padding: 0 1rem;
 }
 
-/* input[type="text"]:focus {
-  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
-} */
+#todo-form input[type="text"] {
+  width: 300px;
+  padding: 0 1rem;
+}
 
 input[type="submit"] {
   height: 2rem;
@@ -23,4 +25,19 @@ input[type="submit"] {
   width: 5rem;
   text-align: center;
   text-transform: uppercase;
+}
+
+body {
+  position: relative;
+  color: white;
+}
+
+img {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  background-size: contain;
 }
