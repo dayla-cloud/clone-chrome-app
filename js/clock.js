@@ -1,12 +1,20 @@
-// clock / interval ,
+// clock / 4.2 PadStart
 
 const clock = document.querySelector("h2#clock");
 
-function sayHello() {
-  console.log("hello");
+function getClock() {
+  const date = new Date();
+  const hours = String(date.getHours()).padStart(2, "0");
+  const minutes = String(date.getMinutes()).padStart(2, "0");
+  const seconds = String(date.getSeconds()).padStart(2, "0");
+  clock.innerText = `${hours}:${minutes}:${seconds}`;
 }
 
-// setInterval 은 두개의 인수를 받아. 첫번째는 내가 실행하고나 하는 것,
-// 두번째는 호출되는 함수의 간격을 ms 로 표기.
+getClock();
+setInterval(getClock, 1000);
 
-setInterval(sayHello, 5000);
+// setInterval : call every seconds I set.
+// padStart, padEnd : add strings in string. string.padStart(numOfStrings, "stringsIwant")
+// String(code), make code to String
+// Reason call getClock() before setInterval() , is setInterval calls it after the seconds I set,
+//so before it, we should call function one time.
