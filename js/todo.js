@@ -2,10 +2,11 @@ const toDoForm = document.getElementById("todo-form");
 const toDoList = document.getElementById("todo-list");
 const toDoInput = toDoForm.querySelector("#todo-form input");
 
-const toDos = [];
+const TODOS_KEY = "todos";
+let toDos = [];
 
 function saveToDos() {
-  localStorage.setItem("todos", JSON.stringify(toDos));
+  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 function deleteToDo(event) {
   //   console.dir(event.target.parentElement.innerText); 부모태그의 텍스트(newTodo)
@@ -39,3 +40,12 @@ function handleToDoSubmit(event) {
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
+
+// parse '[value array]'
+
+const savedToDos = localStorage.getItem(TODOS_KEY);
+if (savedToDos !== null) {
+  const parseToDos = JSON.parse(savedToDos);
+  toDos = parseToDos; //toDos = "todos"의 array  ['a','b','c']
+  parseToDos.forEach(paintToDo);
+}
